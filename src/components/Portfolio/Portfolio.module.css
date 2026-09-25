@@ -1,0 +1,88 @@
+.port_con {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 72px 20px 40px;
+}
+
+.kicker {
+  text-align: center;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.port_title {
+  margin-top: 8px;
+  text-align: center;
+  font-family: "Syne", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.port_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: var(--bg-elevated);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.card:hover img {
+  transform: scale(1.06);
+}
+
+.overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 18px 18px 16px;
+  background: linear-gradient(180deg, transparent, rgba(6, 10, 18, 0.92));
+}
+
+.overlay span {
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.overlay h4 {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 980px) {
+  .port_list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .port_con {
+    padding: 48px 20px;
+  }
+
+  .port_list {
+    grid-template-columns: 1fr;
+  }
+}

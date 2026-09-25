@@ -1,0 +1,60 @@
+:root {
+  --bg: #070b14;
+  --bg-elevated: #0e1524;
+  --surface: rgba(18, 26, 43, 0.72);
+  --text: #e8eefc;
+  --muted: #93a0bb;
+  --accent: #6ee7ff;
+  --accent-2: #8b7cff;
+  --accent-3: #ff7ab6;
+  --line: rgba(255, 255, 255, 0.08);
+  --shadow: 0 24px 80px rgba(2, 6, 18, 0.45);
+  --radius: 22px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(900px 500px at 12% -10%, rgba(139, 124, 255, 0.28), transparent 55%),
+    radial-gradient(700px 480px at 92% 8%, rgba(110, 231, 255, 0.16), transparent 50%),
+    radial-gradient(800px 520px at 70% 100%, rgba(255, 122, 182, 0.12), transparent 55%);
+}
+
+a {
+  color: inherit;
+}
+
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(110, 231, 255, 0.28);
+}
